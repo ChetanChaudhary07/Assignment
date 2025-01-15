@@ -45,7 +45,7 @@ label {
   color: #2d3748;
 }
 
-input[type="text"], input[type="email"], input[type="tel"], input[type="file"], textarea {
+input[type="text"], input[type="email"], input[type="tel"], input[type="file"], textarea, button {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
@@ -64,29 +64,13 @@ button {
   color: #fff;
   border: none;
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 12px;
   font-size: 1rem;
   border-radius: 5px;
-  margin: 10px 0;
-  display: inline-block;
 }
 
 button:hover {
   background: #43a047;
-}
-
-.button-group {
-  text-align: center;
-  margin-top: 20px;
-}
-
-#downloadHTML {
-  margin-top: 20px;
-  background: #0073e6;
-}
-
-#downloadHTML:hover {
-  background: #005bb5;
 }
 
 table {
@@ -104,4 +88,12 @@ table th, table td {
 table th {
   background-color: #f4f6f8;
   color: #333;
+}
+
+#downloadHTML {
+  background: #0073e6;
+}
+
+#downloadHTML:hover {
+  background: #005bb5;
 }
