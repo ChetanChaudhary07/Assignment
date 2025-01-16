@@ -37,15 +37,15 @@ function generateHTML() {
     const isRequired = rows[i].cells[2].innerText === "Yes" ? "required" : "";
 
     if (fieldType === 'textarea') {
-      formHTML += `  <label for="${fieldName}">${fieldName}</label>\n`;
-      formHTML += `  <textarea id="${fieldName}" name="${fieldName}" ${isRequired}></textarea>\n`;
+      formHTML += `        <label for="${fieldName}">${fieldName}</label>\n`;
+      formHTML += `        <textarea id="${fieldName}" name="${fieldName}" ${isRequired}></textarea>\n`;
     } else {
-      formHTML += `  <label for="${fieldName}">${fieldName}</label>\n`;
-      formHTML += `  <input type="${fieldType}" id="${fieldName}" name="${fieldName}" ${isRequired} />\n`;
+      formHTML += `        <label for="${fieldName}">${fieldName}</label>\n`;
+      formHTML += `        <input type="${fieldType}" id="${fieldName}" name="${fieldName}" ${isRequired} />\n`;
     }
   }
 
-  formHTML += '</form>';
+  formHTML += '      </form>';
 
   // Wrap the form HTML inside a basic HTML structure
   const fullHTML = `
