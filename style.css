@@ -1,99 +1,110 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #eef2f7;
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2 {
-  text-align: center;
-  color: #34495e;
-}
-
-.form-wrapper {
-  max-width: 800px;
-  margin: 30px auto;
+  font-family: 'Roboto', Arial, sans-serif;
   padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-form {
+h1 {
+  text-align: center;
+  color: #4CAF50;
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-fieldset {
-  border: 1px solid #dcdfe3;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  padding: 10px;
-}
-
-legend {
-  font-weight: bold;
-  color: #4a5568;
-}
-
-.form-group {
-  margin-bottom: 15px;
+.form-builder {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
 }
 
 label {
   display: block;
-  margin-bottom: 5px;
-  color: #2d3748;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
 }
 
-input[type="text"], input[type="email"], input[type="tel"], input[type="file"], textarea, button {
+input, select, button {
   width: 100%;
   padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #cbd5e0;
-  border-radius: 4px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
   font-size: 1rem;
-  box-sizing: border-box;
-}
-
-textarea {
-  resize: vertical;
 }
 
 button {
-  background: #4caf50;
-  color: #fff;
+  background-color: #4CAF50;
+  color: white;
   border: none;
   cursor: pointer;
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background: #43a047;
+  background-color: #45a049;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-table th, table td {
+table, th, td {
   border: 1px solid #ddd;
-  padding: 10px;
-  text-align: left;
 }
 
-table th {
-  background-color: #f4f6f8;
+th, td {
+  padding: 15px;
+  text-align: left;
+  font-size: 1rem;
   color: #333;
 }
 
-#downloadHTML {
-  background: #0073e6;
+th {
+  background-color: #4CAF50;
+  color: white;
 }
 
-#downloadHTML:hover {
-  background: #005bb5;
+#generatedHTML {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+#htmlOutput {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 5px;
+  overflow: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  color: #333;
+}
+
+#downloadBtn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#downloadBtn:hover {
+  background-color: #45a049;
 }

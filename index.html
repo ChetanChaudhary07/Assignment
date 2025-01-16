@@ -1,80 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Information Form</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Builder</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="form-wrapper">
-        <h1>Personal Information</h1>
-        <form id="infoForm">
-            <fieldset>
-                <legend>Basic Details</legend>
-                <div class="form-group">
-                    <label for="fullName">Full Name:</label>
-                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
-                </div>
-                <div class="form-group">
-                    <label>Preferred Pronoun:</label>
-                    <label><input type="radio" name="pronoun" value="He/Him" required> He/Him</label>
-                    <label><input type="radio" name="pronoun" value="She/Her" required> She/Her</label>
-                    <label><input type="radio" name="pronoun" value="They/Them" required> They/Them</label>
-                </div>
-            </fieldset>
+  <h1>Form Builder</h1>
 
-            <fieldset>
-                <legend>Contact Information</legend>
-                <div class="form-group">
-                    <label for="contactEmail">Email Address:</label>
-                    <input type="email" id="contactEmail" name="contactEmail" placeholder="you@example.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="phoneNumber">Phone Number:</label>
-                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="123-456-7890" required>
-                </div>
-            </fieldset>
+  <!-- Form Field Builder -->
+  <div class="form-builder">
+    <label for="fieldName">Field Name:</label>
+    <input type="text" id="fieldName" placeholder="Enter field name">
 
-            <fieldset>
-                <legend>Additional Details</legend>
-                <div class="form-group">
-                    <label for="city">City:</label>
-                    <input type="text" id="city" name="city" placeholder="Your city" required>
-                </div>
-                <div class="form-group">
-                    <label for="fileUpload">Upload Resume (PDF/Word):</label>
-                    <input type="file" id="fileUpload" name="fileUpload" accept=".pdf, .docx, .doc" required>
-                </div>
-                <div class="form-group">
-                    <label for="bio">Short Bio:</label>
-                    <textarea id="bio" name="bio" rows="4" placeholder="Write something about yourself..."></textarea>
-                </div>
-            </fieldset>
+    <label for="fieldType">Field Type:</label>
+    <select id="fieldType">
+      <option value="text">Text</option>
+      <option value="email">Email</option>
+      <option value="number">Number</option>
+      <option value="password">Password</option>
+      <option value="file">File</option>
+      <option value="checkbox">Checkbox</option>
+      <option value="radio">Radio</option>
+    </select>
 
-            <button type="submit">Submit Information</button>
-        </form>
+    <label for="isRequired">Required:</label>
+    <input type="checkbox" id="isRequired">
 
-        <h2>Submitted Data:</h2>
-        <table id="infoTable">
-            <thead>
-                <tr>
-                    <th>Full Name</th>
-                    <th>Pronoun</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>City</th>
-                    <th>Resume</th>
-                    <th>Bio</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+    <button onclick="addField()">Add Field</button>
+  </div>
 
-        <button id="downloadHTML">Export to HTML</button>
-    </div>
+  <!-- Table for Added Fields -->
+  <table id="fieldTable">
+    <thead>
+      <tr>
+        <th>Field Name</th>
+        <th>Field Type</th>
+        <th>Required</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
 
-    <script src="script.js"></script>
+  <!-- Button to Generate HTML -->
+  <button onclick="generateHTML()">Generate HTML</button>
+
+  <!-- Downloadable HTML Output -->
+  <div id="generatedHTML" style="display: none;">
+    <h2>Generated HTML:</h2>
+    <pre id="htmlOutput"></pre>
+    <button id="downloadBtn">Download HTML</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
