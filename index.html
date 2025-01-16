@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form Builder</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <h1>Form Builder</h1>
@@ -25,26 +26,29 @@
       <option value="radio">Radio</option>
     </select>
 
-    <label for="isRequired">Required:</label>
+    <label for="isRequired" id="isRequiredLabel">Required:</label>
     <input type="checkbox" id="isRequired">
 
     <button onclick="addField()">Add Field</button>
   </div>
 
   <!-- Table for Added Fields -->
-  <table id="fieldTable">
-    <thead>
-      <tr>
+  <div class="Respective-HTML">
+    <h3>User generated Fields</h3>
+    <table id="fieldTable">
+     <thead>
+       <tr>
         <th>Field Name</th>
         <th>Field Type</th>
         <th>Required</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-
-  <!-- Button to Generate HTML -->
-  <button onclick="generateHTML()">Generate HTML</button>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+   
+     <!-- Button to Generate HTML -->
+    <button onclick="generateHTML()">Generate HTML</button>
+  </div>
 
   <!-- Downloadable HTML Output -->
   <div id="generatedHTML" style="display: none;">
@@ -52,7 +56,5 @@
     <pre id="htmlOutput"></pre>
     <button id="downloadBtn">Download HTML</button>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>

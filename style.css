@@ -1,3 +1,8 @@
+*{
+  box-sizing: border-box;
+  margin : 0px;
+  padding: 0px;
+}
 body {
   font-family: 'Roboto', Arial, sans-serif;
   padding: 20px;
@@ -7,18 +12,30 @@ body {
 }
 
 h1 {
+  font-family:'Times New Roman', Times, serif;
   text-align: center;
-  color: #4CAF50;
+  color: #806fdf;
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-.form-builder {
+h3{
+  font-family:'Times New Roman', Times, serif;
+  text-align: center;
+  color: #806fdf;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.form-builder, .Respective-HTML {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: auto;
   margin-bottom: 30px;
+  width: 60%;
+  align-self: center;
 }
 
 label {
@@ -37,8 +54,17 @@ input, select, button {
   font-size: 1rem;
 }
 
+#isRequiredLabel{
+  display: inline-block;
+  margin-bottom: 20px;
+}
+#isRequired{
+  width: auto;
+  /* margin-left: 42%; */
+}
+
 button {
-  background-color: #4CAF50;
+  background-color: #2d5863cd;
   color: white;
   border: none;
   cursor: pointer;
@@ -63,16 +89,28 @@ table, th, td {
   border: 1px solid #ddd;
 }
 
-th, td {
+th {
   padding: 15px;
-  text-align: left;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
   font-size: 1rem;
   color: #333;
 }
 
 th {
-  background-color: #4CAF50;
+  background-color: #333;
   color: white;
+  /* margin-bottom: 1px; */
+}
+
+thead{
+  margin-bottom: 10px;
 }
 
 #generatedHTML {
@@ -81,6 +119,9 @@ th {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
+  width: 60%;
+  align-self: center;
+  margin: auto;
 }
 
 #htmlOutput {

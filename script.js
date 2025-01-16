@@ -49,17 +49,17 @@ function generateHTML() {
 
   // Wrap the form HTML inside a basic HTML structure
   const fullHTML = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Generated Form</title>
-</head>
-<body>
-  ${formHTML}
-</body>
-</html>`;
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Generated Form</title>
+    </head>
+    <body>
+      ${formHTML}
+    </body>
+    </html>`;
 
   // Show the generated HTML in the output section
   htmlOutput.textContent = fullHTML;
